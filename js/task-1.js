@@ -1,13 +1,14 @@
-const quantity = undefined;
-const pricePerDroid  = undefined;
+// 1. Сума чисел у масиві
+// Напиши функцію sumArray, яка приймає масив чисел і повертає їхню суму.
 
-function makeTransaction(quantity, pricePerDroid) {
-    const totalPrice = quantity * pricePerDroid;
+function sumArray(numbers) {
+  let sum = 0;
 
-    const message = `You ordered ${quantity} droids worth ${totalPrice} credits!`;
-    return message;
+  numbers.forEach((number) => {
+    sum += number;
+  });
+
+  return sum;
 }
 
-console.log(makeTransaction(5, 3000));
-console.log(makeTransaction(3, 1000)); 
-console.log(makeTransaction(10, 500)); 
+console.log(sumArray([2, 10]));

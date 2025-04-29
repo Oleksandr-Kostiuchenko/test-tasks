@@ -1,14 +1,16 @@
-const country = undefined;
-const price = undefined;
-const deliveryFee = undefined;
+// 2. Пошук найбільшого числа
+// Напиши функцію findMax, яка знаходить найбільше число в масиві.
 
-function getShippingMessage(country, price, deliveryFee) {
-    const totalPrice = price + deliveryFee;
+function findMax(numbers) {
+  const result = numbers.reduce((maxNum, num) => {
+    if (num > maxNum) {
+      maxNum = num;
+    }
 
-    const message = `Shipping to ${country} will cost ${totalPrice} credits`;
-    return message;
+    return maxNum;
+  }, 0);
+
+  return result;
 }
 
-console.log(getShippingMessage("Australia", 120, 50));
-console.log(getShippingMessage("Germany", 80, 20));
-console.log(getShippingMessage("Sweden", 100, 20));
+console.log(findMax([2, 8, 15, 1, 9]));
